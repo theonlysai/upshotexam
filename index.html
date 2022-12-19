@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Upshot Exam</title>
+    <link href="dist/output.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="flex flex-row">
+
+      <div class="left-menu">
+        <div class="main-logo flex items-center px-2 ">
+          <img src="images/logo.png" />
+        </div>
+        <div class="left-menu-items">
+          <h5 class="pb-2">Main</h5>
+          <ul class="mb-9">
+            <li class="grid justify-items-stretch mb-3 active">          
+              <a class="left-menu-overview" href="#">Overview</a>
+            </li>
+            <li class="grid justify-items-stretch mb-3">
+              <a class="left-menu-leaderboard" href="#">Leaderboard</a>
+            </li>
+            <li class="grid justify-items-stretch mb-3">
+              <a class="left-menu-spreadsheets" href="#">Spreadsheets</a>
+            </li>
+            <li class="grid justify-items-stretch mb-3">
+              <a class="left-menu-administration" href="#">Administration</a>
+            </li>
+            <li class="grid justify-items-stretch mb-3">
+              <a class="left-menu-schedule" href="#">Schedule</a>
+            </li>
+          </ul>
+
+          <h5 class="pb-2">Help</h5>
+          <ul>
+            <li class="grid justify-items-stretch mb-3">          
+              <a class="left-menu-messages" href="#">Messages</a>
+            </li>
+            <li class="grid justify-items-stretch mb-3">
+              <a class="left-menu-library" href="#">Library</a>
+            </li>
+            <li class="grid justify-items-stretch mb-3">
+              <a class="left-menu-settings" href="#">Settings</a>
+            </li>
+            <li class="grid justify-items-stretch mb-3">
+              <a class="left-menu-support" href="#">Support</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="w-full">
+
+        <div class="top-nav flex justify-between items-center">
+          <input class="search-bar" placeholder="Search..."/>
+          <div class="nav-profile">
+            <button class="profile-dropdown flex items-center" type="button">
+              <img class="mr-3" src="images/avatar-robertson.png">
+              <span class="profile-name flex flex-col align-items-start text-left mr-3">Austin Robertson
+                <span class="profile-position mt-1">Human Resource Manager</span>
+              </span>
+              <img src="images/icon-caret-down.png" style="width: 7px;">
+            </button>
+          </div>
+        </div>
+
+        <div class="main-content flex flex-col">
+          <div class="flex flex-row justify-between mb-7">
+            <h3>Overview</h1>
+            <button class="primary-btn flex flex-row grow-0"><img class="mr-3" src="images/icon-download.png" style="width:16px;"> Generate Report</button>
+          </div>
+          <div class="grid grid-cols-4 gap-6 mb-6">
+            <div class="card">
+              <h4 class="mb-4">Total # of Feedback</h4>
+              <h2 class="flex flex-row items-center">27632 <span class="positive ml-3">+2.5%</span></h2>
+              <p class="p-muted">Compared to (21340 last year)</p>
+            </div>
+            <div class="card">
+              <h4 class="mb-4"># of Positive Feedback</h4>
+              <h2 class="flex flex-row items-center">20199 <span class="positive ml-3">+0.5%</span></h2>
+              <p class="p-muted">Compared to (19000 last year)</p>
+            </div>
+            <div class="card">
+              <h4 class="mb-4"># of Corrective Feedback</h4>
+              <h2 class="flex flex-row items-center">110 <span class="negative ml-3">-1.5%</span></h2>
+              <p class="p-muted">Compared to (165 last year)</p>
+            </div>
+            <div class="card">
+              <h4 class="mb-4">Avg. Closeout Times</h4>
+              <h2 class="flex flex-row items-center">7d:12hr <span class="positive ml-3">+1.5%</span></h2>
+              <p class="p-muted">Compared to (12d:8hr last year)</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-4 gap-6">
+            <div class="card col-span-3">
+              <h4 class="mb-4">Average Leadership Performance Score</h4>
+              <div style="height: 481px;">
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <div class="card mb-6 grow flex flex-col">
+                <div class="flex flex-row items-center mb-6">
+                  <div class="mr-6 flex flex-row items-center" style="height: 100px; width: 100px; background: url('images/icon-closeout.png') center center no-repeat; background-size: 20px;">
+                    <canvas id="closeOut"></canvas>
+                  </div>
+                  <div>
+                    <h3>68%</h3>
+                    <p class="p-muted">Closeout Rate this year</p>
+                  </div>
+                </div>
+
+                <hr class="mb-6"/>
+
+                <div class="flex flex-row items-center">
+                  <div class="mr-6 flex flex-row items-center" style="height: 100px; width: 100px; background: url('images/icon-activemanagers.png') center center no-repeat; background-size: 22px 19px;">
+                    <canvas id="activeManagerGuage"></canvas>
+                  </div>
+                  <div>
+                    <h3>76%</h3>
+                    <p class="p-muted">Active Managers this year</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div style="height: 150px;">
+                  <canvas id="activeManagers"></canvas>
+                </div>
+                <h2 class="flex flex-row items-center">10,254 <span class="negative ml-3">-1.5%</span></h2>
+                <p class="p-muted">Active managers this month</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const ctx = document.getElementById('myChart');
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+          datasets: [{
+            label: '',
+            data: [0.5, 0, 0.3, -0.1, -0.5, 0, 0.2],
+            fill: false,
+            borderColor: 'rgba(61, 213, 152, 1)',
+            tension: 0.4
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+                display: false
+            }
+          },
+          scales: {
+            y: {
+              title: {
+                display: false,
+              },
+              min: -1,
+              max: 1,
+              ticks: {
+                // forces step size to be 50 units
+                stepSize: 0.5
+              },
+              grid: {
+                color: 'rgba(61, 61, 73, 0)'
+              }
+            },
+            x: {
+              grid: {
+                color: 'rgba(61, 61, 73, 1)'
+              }
+            }
+          }
+        }
+      });
+    </script>
+
+<script>
+  const chrt = document.getElementById('activeManagers');
+  
+  new Chart(chrt, {
+    type: 'line',
+    data: {
+      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+      datasets: [{
+        label: '',
+        data: [0.5, 0, 0.3, -0.1, -0.5, 0, 0.2],
+        fill: false,
+        borderColor: 'rgba(0, 98, 255, 1)',
+        tension: 0.4
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+            display: false
+        }
+      },
+      scales: {
+        y: {
+          title: {
+            display: false,
+          },
+          min: -1,
+          max: 1,
+          ticks: {
+            display: false
+          },
+          grid: {
+            color: 'rgba(61, 61, 73, 0)'
+          }
+        },
+        x: {
+          grid: {
+            color: 'rgba(61, 61, 73, 0)'
+          },
+          ticks: {
+            display: false
+          }
+        }
+      }
+    }
+  });
+</script>
+
+<script>
+  const closeout = document.getElementById('closeOut');
+  
+  new Chart(closeout, {
+    type: 'doughnut',
+    data: {
+      labels: [
+        'Red',
+        'Blue'
+      ],
+      datasets: [{
+        label: 'My First Dataset',
+        data: [68,18],
+        backgroundColor: [
+          'rgba(30, 117, 255, 1)',
+          'rgba(30, 117, 255, 0.1)'
+
+        ],
+        borderJoinStyle: 'round',
+        borderColor: 'transparent',
+        borderRadius: 50,
+        hoverOffset: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+            display: false
+        },
+        tooltip: {
+            enabled: false
+        }
+      },
+      cutout: 45,
+    }
+  });
+</script>
+
+<script>
+  const activeManagerGuage = document.getElementById('activeManagerGuage');
+  
+  new Chart(activeManagerGuage, {
+    type: 'doughnut',
+    data: {
+      labels: [
+        'Red',
+        'Blue'
+      ],
+      datasets: [{
+        label: 'My First Dataset',
+        data: [76,24],
+        backgroundColor: [
+          'rgba(61, 213, 152, 1)',
+          'rgba(61, 213, 152, 0.1)'
+
+        ],
+        borderJoinStyle: 'round',
+        borderColor: 'transparent',
+        borderRadius: 50,
+        hoverOffset: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+            display: false
+        },
+        tooltip: {
+            enabled: false
+        }
+      },
+      cutout: 45,
+    }
+  });
+</script>
+  </body>
+</html>

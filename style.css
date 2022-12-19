@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Roboto&display=swap');
+
+body {
+    background-color: #13131A;
+    color: #FAFAFB;
+}
+
+h2 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    letter-spacing: 0.116667px;
+    color: #FAFAFB;
+}
+
+h3 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.1px;
+}
+
+h4 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+}
+
+h5 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #696974;
+}
+
+hr {
+    border-color: rgba(68, 68, 79, 1);
+}
+
+.left-menu {
+    width: 250px;
+    /* height: 100vh; */
+    background: radial-gradient(242.2% 100% at 0% 0%, #302A46 0%, #1A1A22 100%);
+}
+
+.main-logo {
+    border-bottom: #44444F 1px solid;
+    height: 70px;
+}
+
+.main-logo img {
+    width: 140px;
+}
+
+.left-menu-items {
+    padding: 30px 0px;
+}
+
+.left-menu-items ul li {
+    padding-left: 17px;
+    border-left: 3px solid transparent;
+    border-radius: 3px;
+}
+
+.left-menu-items ul li.active, .left-menu-items ul li:hover {
+    border-left: 3px solid #FAFAFB;
+    transition-duration: 500ms;
+}
+
+.left-menu-items h5 {
+    margin-left: 20px;
+}
+
+.left-menu-items ul li a {
+    padding: 14px 0 14px 44px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.1px;
+    color: #B5B5BE;
+    background-size: 24px 24px;
+}
+
+.left-menu-items ul li.active a, .left-menu-items ul li a:hover {
+    color: #FAFAFB;
+    transition-duration: 500ms;
+}
+
+.left-menu-overview {
+    background: url('images/icon-dashboard-active.png') left center no-repeat;
+}
+.left-menu-leaderboard {
+    background: url('images/icon-leaderboard.png') left center no-repeat;
+}
+.left-menu-spreadsheets {
+    background: url('images/icon-spreadsheets.png') left center no-repeat;
+}
+.left-menu-administration {
+    background: url('images/icon-administration.png') left center no-repeat;
+}
+.left-menu-schedule {
+    background: url('images/icon-schedule.png') left center no-repeat;
+}
+.left-menu-messages {
+    background: url('images/icon-messages.png') left center no-repeat;
+}
+.left-menu-library {
+    background: url('images/icon-library.png') left center no-repeat;
+}
+.left-menu-settings {
+    background: url('images/icon-settings.png') left center no-repeat;
+}
+.left-menu-support {
+    background: url('images/icon-support.png') left center no-repeat;
+}
+
+.top-nav {
+    height: 70px;
+    padding: 16px 40px;
+    background: radial-gradient(100% 37193.88% at 0% 50%, #1A1A22 0%, #1A1A22 44.68%, #2D2D50 100%);
+}
+
+.search-bar {
+    background: rgba(28, 28, 36, 0.8);
+    background-image: url(images/icon-search.png);
+    background-position: left center;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    padding: 8px 8px 8px 28px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #92929D;
+    transition-duration: 500ms;
+}
+
+.profile-dropdown {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.1px;
+    color: #FAFAFB;
+}
+
+.profile-dropdown img {
+    width: 32px
+}
+
+.profile-dropdown .profile-position {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.1px;
+    color: #696974;
+}
+
+.main-content {
+    padding: 40px;
+}
+
+.card {
+    background: #1C1C24;
+    border-radius: 20px;
+    padding: 24px;
+}
+
+.positive {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #3DD598;
+}
+
+.negative {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #FC5A5A;
+}
+
+.p-muted {
+    color: #92929D;
+}
+
+.primary-btn {
+    background: #6200EE;
+    border-radius: 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.1px;
+    color: #FFFFFF;
+    padding: 10px 12px; 
+}
